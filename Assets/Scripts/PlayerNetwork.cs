@@ -6,7 +6,6 @@ using Unity.Netcode;
 public class PlayerNetwork : NetworkBehaviour {
     private readonly NetworkVariable<Vector3> _netPos = new(writePerm: NetworkVariableWritePermission.Owner);
     private readonly NetworkVariable<Quaternion> _netRot = new(writePerm: NetworkVariableWritePermission.Owner);
-
     void Update() {
         if (IsOwner) {
             _netPos.Value = transform.position;
