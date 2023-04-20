@@ -7,7 +7,7 @@ namespace Cainos.PixelArtTopDown_Basic
 {
     public class TopDownCharacterController : NetworkBehaviour
     {
-        public float speed;
+        public static float speed = 3.0f;
 
         private Animator animator;
 
