@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cainos.PixelArtTopDown_Basic;
 
-public class Player : MonoBehaviour
+public class Player_ : MonoBehaviour
 {
     [SerializeField] float health, maxHealth = 100f;
     public bool isMedkit;
