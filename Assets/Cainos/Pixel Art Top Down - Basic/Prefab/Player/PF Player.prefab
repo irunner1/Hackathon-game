@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 4616719885696106401}
   - component: {fileID: 1622224637}
   - component: {fileID: 5883876112854004436}
+  - component: {fileID: -4873681257500083179}
   m_Layer: 20
   m_Name: PF Player
   m_TagString: Player
@@ -285,6 +286,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c952196e903198c49980bf3967314858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4873681257500083179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5628018141983903104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1325242aaa630de48b67e0da629c4045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healt: 0
+  maxHealth: 100
 --- !u!1001 &4675197611425864114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,6 +317,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 5628018141983903106}
+    - target: {fileID: 4876154758937928482, guid: 499ae25f48da8fd409f560bc6765a441,
+        type: 3}
+      propertyPath: lerpSpeed
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4876154758937928668, guid: 499ae25f48da8fd409f560bc6765a441,
         type: 3}
       propertyPath: m_RootOrder

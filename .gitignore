@@ -6,9 +6,9 @@
 [Ss]treamingAssets/
 [Ss]treamingAssets.meta
 UnityGenerated/
-Logs/
-Packages/
-UserSettings/
+[Ll]ogs/
+[Pp]ackages/
+[Uu]ser[Ss]ettings/
 .vscode
   
 # ----[ Visual Studio / MonoDevelop generated ]------- #
