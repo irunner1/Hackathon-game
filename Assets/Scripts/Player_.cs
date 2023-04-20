@@ -6,12 +6,16 @@ using Cainos.PixelArtTopDown_Basic;
 public class Player_ : MonoBehaviour
 {
     [SerializeField] float health, maxHealth = 100f;
-    public bool isMedkit;
-    public float Medkit_cooldown;
     public float timer;
+    public float Medkit_cooldown;
+    public float Dash_cooldown;
+    public bool isMedkit;
+    public bool isDash;
+
+    public int Block_amount;
+
     void Start()
     {
-
         health = maxHealth;
     }
 
@@ -19,6 +23,7 @@ public class Player_ : MonoBehaviour
     {
         cooldown_control();
         Heal();
+        Dash();
     }
 
     // Update is called once per frame
@@ -65,6 +70,19 @@ public class Player_ : MonoBehaviour
         }
     }
 
+    public void Dash()
+    {
+        TopDownCharacterController.speed = 3.0f;
+        if (!isDash) { return; }
+        
+        if (Input.GetKeyDown(KeyCode.Q) && (gameObject.GetComponent<Rigidbody2D>().velocity.x != 0 || gameObject.GetComponent<Rigidbody2D>().velocity.y != 0))
+        {
+            TopDownCharacterController.speed = 75.0f;
+            isDash = false;
+            Dash_cooldown = 0.0f;
+        }
+    }
+
     public void cooldown_control()
     {
         if (!isMedkit)
@@ -75,5 +93,22 @@ public class Player_ : MonoBehaviour
                 isMedkit = true;
             }
         }
+
+        if (!isDash)
+        {
+            Dash_cooldown += Time.deltaTime;
+            if (Dash_cooldown >= 3.0f)
+            {
+                isDash = true;
+            }
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        // if(collision.gameObject.TryGetComponent<Player_>(out Player_ playerComponent))
+        // {
+            
+        // }
     }
 }
