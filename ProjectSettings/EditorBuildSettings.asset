@@ -15,4 +15,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Scene_Lenel.unity
     guid: caed8a133e13d0c438b069cfbbf9b942
+  - enabled: 1
+    path: Assets/Scenes/Scene_test_game.unity
+    guid: c67884cd01b33ba47b5e91370565842e
   m_configObjects: {}

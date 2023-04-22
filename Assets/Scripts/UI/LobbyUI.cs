@@ -11,7 +11,7 @@ public class LobbyUI : MonoBehaviour {
 
     public static LobbyUI Instance { get; private set; }
 
-
+    [SerializeField] private Canvas canvas;
     [SerializeField] private Transform playerSingleTemplate;
     [SerializeField] private Transform container;
     [SerializeField] private TextMeshProUGUI lobbyNameText;
@@ -20,6 +20,7 @@ public class LobbyUI : MonoBehaviour {
     [SerializeField] private Button changeRunnerButton;
     [SerializeField] private Button changeHunterButton;
     [SerializeField] private Button leaveLobbyButton;
+    [SerializeField] private Button startGameButton;
     // [SerializeField] private Button changeGameModeButton;
 
 
@@ -35,9 +36,14 @@ public class LobbyUI : MonoBehaviour {
             LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Hunter);
         });
         
-
         leaveLobbyButton.onClick.AddListener(() => {
             LobbyManager.Instance.LeaveLobby();
+        });
+
+        startGameButton.onClick.AddListener(() => {
+            Hide();
+            canvas.gameObject.SetActive(false);
+            LobbyManager.Instance.StartGame();
         });
 
         // changeGameModeButton.onClick.AddListener(() => {
@@ -51,6 +57,7 @@ public class LobbyUI : MonoBehaviour {
         // LobbyManager.Instance.OnLobbyGameModeChanged += UpdateLobby_Event;
         LobbyManager.Instance.OnLeftLobby += LobbyManager_OnLeftLobby;
         LobbyManager.Instance.OnKickedFromLobby += LobbyManager_OnLeftLobby;
+        LobbyManager.Instance.OnGameStarted += LobbyManager_OnGameStarted;
 
         Hide();
     }
@@ -68,6 +75,11 @@ public class LobbyUI : MonoBehaviour {
         UpdateLobby(LobbyManager.Instance.GetJoinedLobby());
     }
 
+    private void LobbyManager_OnGameStarted(object sender, System.EventArgs e) {
+        Debug.Log("started");
+        Hide();
+        canvas.gameObject.SetActive(true);
+    }
     private void UpdateLobby(Lobby lobby) {
         ClearLobby();
 
