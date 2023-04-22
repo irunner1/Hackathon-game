@@ -28,6 +28,7 @@ public class LobbyUI : MonoBehaviour {
         Instance = this;
 
         playerSingleTemplate.gameObject.SetActive(false);
+        startGameButton.gameObject.SetActive(false);
 
         changeRunnerButton.onClick.AddListener(() => {
             LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Runner);
@@ -41,8 +42,6 @@ public class LobbyUI : MonoBehaviour {
         });
 
         startGameButton.onClick.AddListener(() => {
-            Hide();
-            canvas.gameObject.SetActive(false);
             LobbyManager.Instance.StartGame();
         });
 
@@ -78,8 +77,9 @@ public class LobbyUI : MonoBehaviour {
     private void LobbyManager_OnGameStarted(object sender, System.EventArgs e) {
         Debug.Log("started");
         Hide();
-        canvas.gameObject.SetActive(true);
+        canvas.gameObject.SetActive(false);
     }
+    
     private void UpdateLobby(Lobby lobby) {
         ClearLobby();
 
@@ -92,7 +92,8 @@ public class LobbyUI : MonoBehaviour {
                 LobbyManager.Instance.IsLobbyHost() &&
                 player.Id != AuthenticationService.Instance.PlayerId // Don't allow kick self
             );
-
+            
+           
             lobbyPlayerSingleUI.UpdatePlayer(player);
         }
 
@@ -102,6 +103,9 @@ public class LobbyUI : MonoBehaviour {
         playerCountText.text = lobby.Players.Count + "/" + lobby.MaxPlayers;
         gameModeText.text = lobby.Data[LobbyManager.KEY_GAME_MODE].Value;
 
+        if (LobbyManager.Instance.IsLobbyHost()) {
+            startGameButton.gameObject.SetActive(true);
+        }
         Show();
     }
 
