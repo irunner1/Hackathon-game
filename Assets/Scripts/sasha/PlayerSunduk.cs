@@ -2,22 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerSunduk : MonoBehaviour
 {
-    [SerializeField] KeyCode keyOne;
-    [SerializeField] KeyCode keyTwo;
+    public float speed = 0.1f;
 
-    [SerializeField] Vector2 moveDirection;
-
-    private void FixedIpdate() {
-        
-        if (Input.GetKey(keyOne)) {
-            GetComponent<Rigidbody2D>().velocity += moveDirection;
-        }
-        
-        if (Input.GetKey(keyTwo)) {
-            GetComponent<Rigidbody2D>().velocity -= moveDirection;
-        }
-
+    private void Update() {
+        transform.position += new Vector3(speed, 0, 0) * Input.GetAxis("Horizontal");
+        // transform.position += new Vector3(0, speed, 0) * Input.GetAxis("Vertical");
     }
 }
