@@ -13,6 +13,8 @@
     - Загадки в игре
     - UI
     - Проверить подключение с разных пк
+    - Убрать кнопки с клиентов
+    - Починить загрузку уровня
 
 using asset: `Cainos Pixel Art Top Down`
 using Code Monkey unity network tutorial

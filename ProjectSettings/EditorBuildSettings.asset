@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Cainos/Pixel Art Top Down - Basic/Scene/SC Pixel Art Top Down -
       Basic.unity
     guid: 86e89bd9e4a9c5245a015cf17e3c0aae
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene_menu.unity
     guid: 174fd132de3a212499c9bf109940fe4f
   - enabled: 0
