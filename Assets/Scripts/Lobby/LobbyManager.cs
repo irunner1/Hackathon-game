@@ -169,7 +169,6 @@ public class LobbyManager : MonoBehaviour {
             Lobby lobby = await Lobbies.Instance.JoinLobbyByCodeAsync(lobbyCode, joinLobbyByCodeOptions);
             joinedLobby = lobby;
             Debug.Log("Joined lobby with code " + lobbyCode);
-            PrintPlayers(lobby);
         }
         catch (LobbyServiceException e) {
             Debug.Log(e);
@@ -203,20 +202,8 @@ public class LobbyManager : MonoBehaviour {
         });
     }
 
-    private void PrintPlayers() {
-        PrintPlayers(joinedLobby);
-    }
-
     public Lobby GetJoinedLobby() {
         return joinedLobby;
-    }
-
-    private void PrintPlayers(Lobby lobby) {
-        Debug.Log("Players in lobby " + lobby.Name + " " + lobby.Data["GameMode"].Value);
-        foreach (Player player in lobby.Players)
-        {
-            Debug.Log(player.Id + " " + player.Data["Playername"].Value);
-        }
     }
     
     public async void UpdatePlayerCharacter(PlayerCharacter playerCharacter) {
@@ -231,8 +218,9 @@ public class LobbyManager : MonoBehaviour {
                             value: playerCharacter.ToString())
                     }
                 };
-
                 string playerId = AuthenticationService.Instance.PlayerId;
+                Debug.Log(playerId);
+                Debug.Log(options.Data[KEY_PLAYER_CHARACTER].Value);
 
                 Lobby lobby = await LobbyService.Instance.UpdatePlayerAsync(joinedLobby.Id, playerId, options);
                 joinedLobby = lobby;
@@ -363,6 +351,7 @@ public class LobbyManager : MonoBehaviour {
                 });
 
                 joinedLobby = lobby;
+                CustomManager.Instance.spawnPlayer(lobby);
             }
             catch (LobbyServiceException e) {
                 Debug.Log(e);

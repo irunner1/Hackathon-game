@@ -78,7 +78,7 @@ public class LobbyUI : MonoBehaviour {
         Debug.Log("started");
         Hide();
         canvas.gameObject.SetActive(false);
-        customManager.gameObject.SetActive(true);
+        // customManager.gameObject.SetActive(true);
     }
     
     private void UpdateLobby(Lobby lobby) {
