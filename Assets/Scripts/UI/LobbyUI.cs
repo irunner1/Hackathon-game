@@ -8,10 +8,10 @@ using UnityEngine.UI;
 
 public class LobbyUI : MonoBehaviour {
 
-
     public static LobbyUI Instance { get; private set; }
 
     [SerializeField] private Canvas canvas;
+    [SerializeField] private GameObject customManager;
     [SerializeField] private Transform playerSingleTemplate;
     [SerializeField] private Transform container;
     [SerializeField] private TextMeshProUGUI lobbyNameText;
@@ -78,6 +78,7 @@ public class LobbyUI : MonoBehaviour {
         Debug.Log("started");
         Hide();
         canvas.gameObject.SetActive(false);
+        customManager.gameObject.SetActive(true);
     }
     
     private void UpdateLobby(Lobby lobby) {
@@ -93,7 +94,6 @@ public class LobbyUI : MonoBehaviour {
                 player.Id != AuthenticationService.Instance.PlayerId // Don't allow kick self
             );
             
-           
             lobbyPlayerSingleUI.UpdatePlayer(player);
         }
 

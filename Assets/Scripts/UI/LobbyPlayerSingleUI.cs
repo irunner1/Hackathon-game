@@ -11,9 +11,7 @@ public class LobbyPlayerSingleUI : MonoBehaviour {
     [SerializeField] private Image characterImage;
     [SerializeField] private Button kickPlayerButton;
 
-
     private Player player;
-
 
     private void Awake() {
         kickPlayerButton.onClick.AddListener(KickPlayer);
