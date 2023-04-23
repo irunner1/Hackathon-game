@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Unity.Netcode;
+using Cainos.PixelArtTopDown_Basic;
+// using Unity.Services.Lobbies.Models;
 
 public class ChestScript : MonoBehaviour
 {
@@ -14,6 +18,32 @@ public class ChestScript : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    public enum Scenes {
+        Scene_test_game,
+        Scene_quest1,
+        Scene_quest2,
+        Scene_quest3
+    }
+
+    // private void OnTriggerEnter(Collider other) {
+    //     NetworkObject networkObject = other.GetComponent<NetworkObject>();
+    //     if (networkObject != null) {
+    //         int tmp_num = UnityEngine.Random.Range(0, 3);
+    //         string str = ((Scenes) tmp_num).ToString();
+
+    //         LoadScene(networkObject, str);
+    //     }
+    // }
+
+    public static void LoadScene(NetworkObject networkObject, string scene) {
+        if (!networkObject) {
+            return;
+        }
+
+        SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("Scene_test_game");
     }
 
     private void Update()
@@ -44,7 +74,19 @@ public class ChestScript : MonoBehaviour
                 }
             }
         }
+        NetworkObject networkObject = other.GetComponent<NetworkObject>();
+        if (networkObject != null) {
+            int tmp_num = UnityEngine.Random.Range(0, 3);
+            string str = ((Scenes) tmp_num).ToString();
+            Debug.Log(str);
+            LoadScene(networkObject, str);
+            other.gameObject.GetComponent<TopDownCharacterController>().enabled = false;
+        }
+        if (GetComponent<CheckCollider>().isInTrigger == true) {
+            other.gameObject.GetComponent<TopDownCharacterController>().enabled = true;
+        }
     }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {

@@ -351,7 +351,7 @@ public class LobbyManager : MonoBehaviour {
                 });
 
                 joinedLobby = lobby;
-                CustomManager.Instance.spawnPlayer(lobby);
+                // CustomManager.Instance.spawnPlayer(lobby);
             }
             catch (LobbyServiceException e) {
                 Debug.Log(e);

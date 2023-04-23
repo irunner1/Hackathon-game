@@ -11595,6 +11595,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 530854816}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &542380132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1969485125138479852, guid: 128187efbde70c64cb665ff4d86b13d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1969485124674901387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &542380137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542380132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812d9087dd0782c4eb3e840a69beab1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &544079037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34725,7 +34743,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetworkManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1969485125138479840, guid: 128187efbde70c64cb665ff4d86b13d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 128187efbde70c64cb665ff4d86b13d9, type: 3}
 --- !u!1001 &2137395896942627639
 PrefabInstance:
