@@ -11,8 +11,9 @@ public class Player_ : MonoBehaviour
     public float Dash_cooldown;
     public bool isMedkit;
     public bool isDash;
+    public bool isKey;
 
-    public int Block_amount;
+    public int Block_amount = 0;
 
     void Start()
     {
