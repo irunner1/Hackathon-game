@@ -6,27 +6,26 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Slider slider;
-   public Player_ time;
+    public Player_Medkit time;
 
-   private void Start()
-   {
-        SetMaxTime(time.timer);
-   }
+    private void Start()
+    {
+        SetMaxTime(time.medkit_timer);
+    }
 
-   private void Update()
-   {
-        SetTime(time.timer);
-   }
+    private void Update()
+    {
+        SetTime(time.medkit_timer);
+    }
 
-   public void SetMaxTime(float timer)
-   {
+    public void SetMaxTime(float timer)
+    {
         slider.maxValue = timer;
-        slider.value  = timer;
-   }
+    }
 
-     public void SetTime(float timer)
-   {
-        slider.value  = timer;
-   }
+    public void SetTime(float timer)
+    {
+        slider.value = timer;
+    }
 }
 
