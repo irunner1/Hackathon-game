@@ -538,7 +538,7 @@ GameObject:
   - component: {fileID: 505885588659060724}
   - component: {fileID: 8621541414095728756}
   m_Layer: 20
-  m_Name: PF Player
+  m_Name: PF_Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -738,6 +738,7 @@ MonoBehaviour:
   health: 0
   maxHealth: 100
   timer: 0
+  medkit_timer: 0
   Medkit_cooldown: 0
   Dash_cooldown: 0
   isMedkit: 0

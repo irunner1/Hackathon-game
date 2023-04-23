@@ -961,24 +961,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 51286685}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &54532795 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1969485125138479852, guid: 128187efbde70c64cb665ff4d86b13d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 2014390491}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &54532799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54532795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33ed2bfa4226f4e14ab14929291dbc77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &55099862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22836,7 +22818,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 31.26181, y: 1.3631973}
+  m_AnchoredPosition: {x: 36.2, y: 1.3631973}
   m_SizeDelta: {x: 36.5778, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835535094
@@ -41470,8 +41452,7 @@ PrefabInstance:
         type: 3}
       propertyPath: NetworkConfig.PlayerPrefab
       value: 
-      objectReference: {fileID: 5628018141983903104, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1969485125138479842, guid: 128187efbde70c64cb665ff4d86b13d9,
         type: 3}
       propertyPath: NetworkConfig.ConnectionApproval
