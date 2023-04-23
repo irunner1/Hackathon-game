@@ -534,7 +534,6 @@ GameObject:
   - component: {fileID: 5657684903820326619}
   - component: {fileID: 4616719885696106401}
   - component: {fileID: 1622224637}
-  - component: {fileID: 5883876112854004436}
   - component: {fileID: 505885588659060724}
   - component: {fileID: 8621541414095728756}
   m_Layer: 20
@@ -688,7 +687,6 @@ MonoBehaviour:
   health: 0
   maxHealth: 100
   Block_amount: 0
-  timer: 0
   medkit_timer: 0
   Medkit_cooldown: 0
   isMedkit: 0
@@ -729,19 +727,6 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &5883876112854004436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628018141983903104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c952196e903198c49980bf3967314858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cheapInterpolationTime: 0.1
 --- !u!114 &505885588659060724
 MonoBehaviour:
   m_ObjectHideFlags: 0

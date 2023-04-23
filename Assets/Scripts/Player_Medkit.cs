@@ -5,7 +5,6 @@ using Cainos.PixelArtTopDown_Basic;
 
 public class Player_Medkit : Player_
 {
-    public float timer;
     public float medkit_timer;
     public float Medkit_cooldown;
     public bool isMedkit;
