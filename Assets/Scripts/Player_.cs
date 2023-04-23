@@ -13,6 +13,7 @@ public class Player_ : MonoBehaviour
     public bool isMedkit;
     public bool isDash;
     public bool isKey;
+    public bool keyisUsed = false;
 
     public int Block_amount = 0;
 

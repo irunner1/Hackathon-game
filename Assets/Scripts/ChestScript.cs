@@ -8,44 +8,58 @@ public class ChestScript : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public bool isOpened = false;
     public bool isEmpty = false;
+    public bool isInTrigger = false;
+    public bool canOpen = false;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void OnTriggerStay2D(Collider2D col)
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (isInTrigger)
         {
-            if (col.gameObject.TryGetComponent<Player_>(out Player_ comp_key))
+            if (Input.GetKey(KeyCode.E))
             {
-                if(comp_key.isKey && !isEmpty)
+                if (canOpen)
                 {
-                    isOpened = true;
-                    isEmpty = true;
-                    comp_key.Block_amount += 20;
                     changeSprite();
+                    isOpened = true;
                 }
             }
-            // 
-            // Тут нужно вписать скрипт после решения головоломки
-            // 
-            // if (isOpened && !isEmpty)
-            // {
-            //     if (col.gameObject.TryGetComponent<Player_>(out Player_ comp))
-            //     {
-            //         comp.Block_amount += 20;
-            //         isEmpty = true;
-            //         changeSprite();
-            //     }
-            // }
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        isInTrigger = true;
+        if (!isOpened)
+        {
+            if (other.gameObject.TryGetComponent<Player_>(out Player_ comp))
+            {
+                if (comp.isKey)
+                {
+                    canOpen = true;
+                }
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(isOpened)
+        {
+            if (other.gameObject.TryGetComponent<Player_>(out Player_ comp))
+            {
+                comp.isKey = false;
+            }
+        }
+        isInTrigger = false;
+    }
     private void changeSprite()
     {
-        if (isEmpty && isOpened)
+        if (isOpened)
         {
             spriteRenderer.sprite = opened;
         }
