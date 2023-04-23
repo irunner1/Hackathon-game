@@ -7,6 +7,7 @@ public class Player_ : MonoBehaviour
 {
     [SerializeField] public float health, maxHealth = 100f;
     public float timer;
+    public float medkit_timer;
     public float Medkit_cooldown;
     public float Dash_cooldown;
     public bool isMedkit;
