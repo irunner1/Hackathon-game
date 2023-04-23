@@ -29,8 +29,7 @@ public class PlayerNetwork : NetworkBehaviour {
             }
         }
 
-        public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
-        {
+        public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter {
             serializer.SerializeValue(ref _x);
             serializer.SerializeValue(ref _z);
         }
