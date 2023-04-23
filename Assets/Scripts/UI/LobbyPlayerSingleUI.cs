@@ -22,7 +22,7 @@ public class LobbyPlayerSingleUI : MonoBehaviour {
     public void SetKickPlayerButtonVisible(bool visible) {
         kickPlayerButton.gameObject.SetActive(visible);
     }
-
+    
     public void UpdatePlayer(Player player) {
         this.player = player;
         playerNameText.text = player.Data[LobbyManager.KEY_PLAYER_NAME].Value;

@@ -7,14 +7,16 @@
     - Сцена с мультиплеером
     - После лобби сделана загрузка уровня
     - Починил ошибку с двумя audioliseners на сцене
-
-# Todo:
-    - Не отображается список игроков в лобби
-    - Загадки в игре
-    - UI
+    - Отображается список игроков в лобби
     - Проверить подключение с разных пк
-    - Убрать кнопки с клиентов
+    - Убрал кнопки с клиентов
     - Починить загрузку уровня
 
-using asset: `Cainos Pixel Art Top Down`
-using Code Monkey unity network tutorial
+# Todo:
+    - Загадки в игре
+    - UI
+    - Билд на WebGl
+    - Презентация
+
+<p> using asset: `Cainos Pixel Art Top Down` </p>
+<p> using Code Monkey unity network tutorial </p>
