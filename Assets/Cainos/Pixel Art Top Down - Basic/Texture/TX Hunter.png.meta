@@ -123,10 +123,10 @@ TextureImporter:
         x: 6
         y: 70
         width: 21
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5000002, y: -0.0032873154}
+      border: {x: 0, y: 0, z: 0, w: 34}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -145,9 +145,9 @@ TextureImporter:
         y: 70
         width: 21
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      alignment: 9
+      pivot: {x: 0.50864935, y: 0.0004968643}
+      border: {x: 0, y: 0, z: 0, w: 34}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -162,13 +162,13 @@ TextureImporter:
       name: TX Hunter_2
       rect:
         serializedVersion: 2
-        x: 69
+        x: 68
         y: 70
-        width: 21
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        width: 22
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5000007, y: 0.0004971822}
+      border: {x: 0, y: 0, z: 0, w: 34}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -187,8 +187,8 @@ TextureImporter:
         y: 68
         width: 27
         height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.50672746, y: 0.0004970006}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

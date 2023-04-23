@@ -290,7 +290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0036, y: -22.4}
+  m_AnchoredPosition: {x: 0.0036, y: -107}
   m_SizeDelta: {x: 145.9659, y: 12.9737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3761899817838971893
@@ -380,7 +380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0036, y: 147.6}
+  m_AnchoredPosition: {x: 0.0036, y: 109}
   m_SizeDelta: {x: 145.9659, y: 12.9737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3162040862426388141
@@ -531,13 +531,12 @@ GameObject:
   - component: {fileID: 5628018141983903107}
   - component: {fileID: 5628018141983903116}
   - component: {fileID: 5628018141983903117}
+  - component: {fileID: 214214704499232323}
   - component: {fileID: 4616719885696106401}
   - component: {fileID: 1622224637}
-  - component: {fileID: -4873681257500083179}
   - component: {fileID: 505885588659060724}
-  - component: {fileID: 8621541414095728756}
   m_Layer: 20
-  m_Name: PF Player
+  m_Name: PF R_Dash
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -672,6 +671,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &214214704499232323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5628018141983903104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8093feaa0a1e35f41aab18adc2184c7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
+  Block_amount: 0
+  Dash_cooldown: 0
+  isDash: 0
 --- !u!95 &4616719885696106401
 Animator:
   serializedVersion: 5
@@ -709,29 +725,6 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &-4873681257500083179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628018141983903104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1325242aaa630de48b67e0da629c4045, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 100
-  timer: 0
-  medkit_timer: 0
-  Medkit_cooldown: 0
-  Dash_cooldown: 0
-  isMedkit: 0
-  isDash: 0
-  isKey: 0
-  keyisUsed: 0
-  Block_amount: 0
 --- !u!114 &505885588659060724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,21 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 3162040862426388141}
-  playerHealth: {fileID: -4873681257500083179}
---- !u!114 &8621541414095728756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628018141983903104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75b5e7d9ade8a4fd0ae7e779ecc50ddd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 3761899817838971893}
-  time: {fileID: -4873681257500083179}
+  playerHealth: {fileID: 214214704499232323}
 --- !u!1 &7993614820368920507
 GameObject:
   m_ObjectHideFlags: 0

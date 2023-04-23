@@ -66,13 +66,13 @@ public class ChestScript : MonoBehaviour
         isInTrigger = true;
         if (!isOpened)
         {
-            if (other.gameObject.TryGetComponent<Player_>(out Player_ comp))
-            {
-                if (comp.isKey)
-                {
-                    canOpen = true;
-                }
-            }
+            // if (other.gameObject.TryGetComponent<Player_Key>(out Player_Key comp))
+            // {
+            //     if (comp.isKey)
+            //     {
+            //         canOpen = true;
+            //     }
+            // }
         }
         NetworkObject networkObject = other.GetComponent<NetworkObject>();
         if (networkObject != null) {
@@ -92,10 +92,10 @@ public class ChestScript : MonoBehaviour
     {
         if(isOpened)
         {
-            if (other.gameObject.TryGetComponent<Player_>(out Player_ comp))
-            {
-                comp.isKey = false;
-            }
+            // if (other.gameObject.TryGetComponent<Player_Key>(out Player_Key comp))
+            // {
+            //     comp.isKey = false;
+            // }
         }
         isInTrigger = false;
     }
