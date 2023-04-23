@@ -22818,8 +22818,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 37.9729, y: 1.3631973}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 31.26181, y: 1.3631973}
+  m_SizeDelta: {x: 36.5778, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835535094
 MonoBehaviour:
@@ -43398,8 +43398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7793d7c4cd0d28e459a0ebd416ca7e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hunterSprite: {fileID: 21300090, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
-  runnerSprite: {fileID: 21300094, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
+  hunterSprite: {fileID: -229501319, guid: 46e60f200d0842c42baca6e3e2855ca3, type: 3}
+  runnerSprite: {fileID: 21300000, guid: ec47f75fe8aff1644ac73998f4ad31b5, type: 3}
 --- !u!4 &2118436405
 Transform:
   m_ObjectHideFlags: 0
