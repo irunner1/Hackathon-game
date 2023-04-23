@@ -53,17 +53,17 @@ public class Player_ : MonoBehaviour
         if (!isMedkit) { return; }
         if (Input.GetKeyUp(KeyCode.F))
         {
-            timer = 0.0f;
+            medkit_timer = 0.0f;
             TopDownCharacterController.speed = 3.0f;
         }
         if (Input.GetKey(KeyCode.F) && health != maxHealth)
         {
             TopDownCharacterController.speed = 0.0f;
-            timer += Time.deltaTime;
-            if (timer >= 5.0f)
+            medkit_timer += Time.deltaTime;
+            if (medkit_timer >= 5.0f)
             {
                 addHealth(50);
-                timer = 0;
+                medkit_timer = 0;
                 isMedkit = false;
                 Medkit_cooldown = 0.0f;
                 TopDownCharacterController.speed = 3.0f;
@@ -73,15 +73,19 @@ public class Player_ : MonoBehaviour
 
     public void Dash()
     {
-        TopDownCharacterController.speed = 3.0f;
         if (!isDash) { return; }
-        
         if (Input.GetKeyDown(KeyCode.Q) && (gameObject.GetComponent<Rigidbody2D>().velocity.x != 0 || gameObject.GetComponent<Rigidbody2D>().velocity.y != 0))
         {
             TopDownCharacterController.speed = 75.0f;
-            isDash = false;
+            Invoke(nameof(dropSpeed), 0.0375f);
             Dash_cooldown = 0.0f;
+            isDash = false;
         }
+    }
+
+    public void dropSpeed()
+    {
+        TopDownCharacterController.speed = 3.0f;
     }
 
     public void cooldown_control()
@@ -105,11 +109,4 @@ public class Player_ : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        // if(collision.gameObject.TryGetComponent<Player_>(out Player_ playerComponent))
-        // {
-            
-        // }
-    }
 }
