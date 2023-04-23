@@ -5,7 +5,7 @@ using Cainos.PixelArtTopDown_Basic;
 
 public class Player_ : MonoBehaviour
 {
-    [SerializeField] float health, maxHealth = 100f;
+    [SerializeField] public float health, maxHealth = 100f;
     public float timer;
     public float Medkit_cooldown;
     public float Dash_cooldown;
