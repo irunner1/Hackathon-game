@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
 	{
 		canvas = GetComponent<Canvas>();
 		canvas.enabled = false;
-		items = player.GetComponent<Items>();
+		// items = player.GetComponent<Items>(); // Что такое Items?
 		slots = inventorySlots.GetComponentsInChildren<Slot>();
 	}
 
@@ -37,10 +37,10 @@ public class Inventory : MonoBehaviour
 		for (int i = 0; i < slots.Length; i++)
 		{
 			bool active = false;
-			if (items.hasItems[i])
-			{
-				active = true;
-			}
+			// if (items.hasItems[i])
+			// {
+			// 	active = true;
+			// }
 
 			slots[i].UpdateSlot(active);
 		}

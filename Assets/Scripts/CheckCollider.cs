@@ -5,11 +5,6 @@ using UnityEngine.SceneManagement;
 using Cainos.PixelArtTopDown_Basic;
 
 public class CheckCollider : MonoBehaviour {
-    public static CheckCollider Instance { get; private set; }
-     private void Awake() {
-        Instance = this;
-    }
-
 
     public bool isInTrigger = false;
 

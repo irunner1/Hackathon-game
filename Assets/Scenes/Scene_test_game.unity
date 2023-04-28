@@ -43166,7 +43166,7 @@ PrefabInstance:
         type: 3}
       propertyPath: NetworkConfig.PlayerPrefab
       value: 
-      objectReference: {fileID: 5628018141983903104, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+      objectReference: {fileID: 5628018141983903104, guid: c9dce1b0268ad9048ab7b62fd84b925d,
         type: 3}
     - target: {fileID: 1969485125138479842, guid: 128187efbde70c64cb665ff4d86b13d9,
         type: 3}
@@ -43188,6 +43188,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ProtocolType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969485125138479843, guid: 128187efbde70c64cb665ff4d86b13d9,
+        type: 3}
+      propertyPath: ConnectionData.Port
+      value: 7777
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969485125138479843, guid: 128187efbde70c64cb665ff4d86b13d9,
+        type: 3}
+      propertyPath: ConnectionData.Address
+      value: 127.0.0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1969485125138479852, guid: 128187efbde70c64cb665ff4d86b13d9,
         type: 3}
